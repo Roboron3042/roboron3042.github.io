@@ -3,21 +3,21 @@
   * The order is important!
   */
 const add_extended_timeline_data = (events) => {
-	add_extended_major(events);
+	add_extendedmilestones(events);
 	add_extended_releases(events);
 	add_extended_contributors(events);
 	add_extended_eras(events);
     add_extended_paksets(events);
 }
 
-// List of major events
-const add_extended_major = (events) => {
+// List of milestone events
+const add_extendedmilestones = (events) => {
   const short_events = [
     {start: '2009-01-21', content: 'Simutrans Experimental is born'},
     {start: '2017-01', content: 'Simutrans Experimental is<br>renamed to Simutrans Extended'},
     {start: '2022-04-03', content: 'Elevated way supports'},
   ]
-  short_events.forEach((event) => events.add([{...event, group: 'extended', subgroup: 'major', className: 'major'}]));
+  short_events.forEach((event) => events.add([{...event, group: 'extended', subgroup: 'milestone', className: 'milestone'}]));
 }
 
 // List of contributors events
@@ -39,7 +39,7 @@ const add_extended_eras = (events) => {
   short_events.forEach((event) => events.add([{...event, type: 'background', group: 'extended'}]));
 }
 
-// List of pakset events
+// List of paksets events
 const add_extended_paksets = (events) => {
   const short_events = [
     {start: '2018-09-06', content: 'Pak256-Ex 1.0.0'},

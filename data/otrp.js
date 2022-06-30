@@ -3,19 +3,19 @@
  * The order is important!
  */
 const add_otrp_timeline_data = (events) => {
-	add_otrp_major(events);
+	add_otrpmilestones(events);
 	add_otrp_releases(events);
 	add_otrp_contributors(events);
 	add_otrp_eras(events);
 }
 
-// List of major events
-const add_otrp_major = (events) => {
+// List of milestone events
+const add_otrpmilestones = (events) => {
   const short_events = [
     {start: '2017-02-06', content: '<img src="https://github.com/teamhimeh/simutrans/raw/OTRP-distribute/documentation/logo/OTRP_logo.png" /><br>THLeaderH/himeshi announces<br> One-way Two-lane Road Patch'},
     {start: '2021-03-31', content: 'End of OTRP development announced'},
   ]
-  short_events.forEach((event) => events.add([{...event, group: 'otrp', subgroup: 'major', className: 'major'}]));
+  short_events.forEach((event) => events.add([{...event, group: 'otrp', subgroup: 'milestone', className: 'milestone'}]));
 }
 
 // List of contributors events

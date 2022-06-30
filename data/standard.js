@@ -4,15 +4,15 @@
  */
 const add_standard_timeline_data = (events) => {
 	add_non_simutrans(events);
-	add_standard_major(events);
+	add_standardmilestones(events);
 	add_standard_releases(events);
 	add_standard_contributors(events);
 	add_standard_eras(events);
     add_standard_paksets(events)
 }
 
-// List of major events
-const add_standard_major = (events) => {
+// List of milestone events
+const add_standardmilestones = (events) => {
   const short_events = [
     {start: '1997-06', content: 'Hansjörg Malthaner "Hajo" starts working on Simutrans'},
     {start: '2007-05', content: '<img src= "http://assets.stickpng.com/images/58481842cef1014c0b5e49a2.png" /><br>Simutrans becomes<br> open source'},
@@ -25,7 +25,7 @@ const add_standard_major = (events) => {
     {start: '2022-05-26', content: '<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Google_Play_Arrow_logo.svg/512px-Google_Play_Arrow_logo.svg.png" /><br>Play Store<br>Release'},
     //{start: '2022-06', content: 'Simutrans has been in development for 25 years!'},
   ]
-  short_events.forEach((event) => events.add([{...event, group: 'standard', subgroup: 'major', className: 'major'}]));
+  short_events.forEach((event) => events.add([{...event, group: 'standard', subgroup: 'milestone', className: 'milestone'}]));
 }
 
 // List of contributors events
@@ -55,7 +55,7 @@ const add_non_simutrans = (events) => {
   short_events.forEach((event) => events.add([{...event, type: 'point', group: 'standard', subgroup: 'other', className:'other'}]));
 }
 
-// List of pakset events
+// List of paksets events
 const add_standard_paksets = (events) => {
   const short_events = [
     {start: '2009-02-14', content: 'Initial Pak192.Comic release'},

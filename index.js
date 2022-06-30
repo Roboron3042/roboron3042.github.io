@@ -6,7 +6,7 @@ var container = document.getElementById('timeline');
 
 // Groups are the Simutrans forks
 // The order is important!
-const visibility = { major: true, release: true, contributor: true, pakset: true };
+const visibility = { milestone: true, release: true, contributor: true, pakset: true };
 const groups = new vis.DataSet([
   {subgroupVisibility: {...visibility}, id: 'otrp', content:'Simutrans OTRP<br>Simutrans Iron Bite'},
   {subgroupVisibility: {...visibility}, id: 'extended', content:'Simutrans Extended'},
